@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../services";
+import { FRONT_URL } from "../services";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const URL = BASE_URL;
+  const F_URL = FRONT_URL;
+  const signup = "/sign-up";
 
   const loginData = async () => {
     let data = await fetch(`${URL}/users/${username}`, {
@@ -14,7 +17,7 @@ const Login = () => {
       headers: { "Content-Type": "application/json" },
     });
     data = await data.json();
-    if(data === null){
+    if (data === null) {
       window.alert("Wrong username");
       navigate("/login");
     }
@@ -46,7 +49,7 @@ const Login = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <a href="/sign-up">Doesn't have an account ?</a>
+      <a href={F_URL + signup}>Doesn't have an account ?</a>
       <button onClick={loginData} className="login-button" type="button">
         Submit
       </button>
