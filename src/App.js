@@ -20,7 +20,7 @@ function App() {
         <Nav />
         <Routes>
           <Route element={<PrivateComponent />}>
-            <Route path="/" element={<h1>Home Page</h1>} />
+            <Route path="/" element={<h1>Home</h1>} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/product/:id" element={<Product />} />
             <Route path="/users/user/:id" element={<User />} />
