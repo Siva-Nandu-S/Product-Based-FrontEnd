@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { BASE_URL, FRONT_URL } from "../services";
+import { BASE_URL} from "../services";
 import { Link } from "react-router-dom";
+// import {FRONT_URL } from "../services";
+
 
 const Products = () => {
   const [products, setProducts] = useState([]);
