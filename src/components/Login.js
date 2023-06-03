@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { BASE_URL } from "../services";
 import { FRONT_URL } from "../services";
-import { Link } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
