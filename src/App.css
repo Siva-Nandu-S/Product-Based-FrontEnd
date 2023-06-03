@@ -1,0 +1,334 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.nav ul li {
+  display: inline-block;
+  padding: 1rem;
+  list-style: none;
+}
+
+.nav ul li :hover {
+  display: inline-block;
+  list-style: none;
+  color: #282c34;
+}
+
+.nav ul li a {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav ul li button {
+  border: none;
+  padding: 7px;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  background: none;
+}
+
+.nav ul li p {
+  position: absolute;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.nav {
+  background-color: #58a5f3;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.register {
+  width: 30%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-top: 5rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.register h1 {
+  padding: 1rem;
+  align-self: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.register .signUp-input {
+  padding: 1rem;
+  margin: 0.7rem;
+}
+
+.register .signUp-button {
+  width: 7rem;
+  align-self: center;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.register .login-input {
+  padding: 1rem;
+  margin: 0.7rem;
+}
+
+.register a {
+  align-self: center;
+  margin: 2rem;
+}
+
+.register .login-button {
+  align-self: center;
+  width: 7rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.add-product {
+  width: 20rem;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-top: 5rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.add-product h1 {
+  padding: 1rem;
+  align-self: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.add-product .add-product-item {
+  padding: 1rem;
+  margin: 0.7rem;
+}
+
+.add-product .add-product-button {
+  align-self: center;
+  width: 7rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.products {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.products .products-list .container {
+  width: 20rem;
+  height: 5rem;
+  margin: 1rem;
+  padding: 1rem;
+  float: left;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.products .products-list .container :nth-child(3n + 1) {
+  clear: both;
+}
+
+.products .products-list .container li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.5rem;
+  align-self: center;
+}
+
+.products .products-list .container li .product-item {
+  padding: 0.5rem;
+}
+
+.products .products-list .container li .product-details-button {
+  margin: auto;
+  border: 1px solid;
+  padding: 0.5rem;
+  width: 4rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: #e3e3e3;
+  border-radius: 1rem;
+}
+
+.products .products-list {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0.5rem;
+  margin-left: 10rem;
+}
+
+.products .products-h1 {
+  padding: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.product-container {
+  display: block;
+  text-align: center;
+  padding-top: 3rem;
+  justify-content: space-between;
+}
+
+.product-container h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.product-container .product-buy-button {
+  width: 60px;
+  padding: 5px 10px;
+  border-radius: 0.75rem;
+  background-color: #eaecf3;
+  margin-top: 10rem;
+  border: 1px solid #000;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.user-profile {
+  text-align: center;
+  padding: 2rem;
+}
+
+.user-profile .add-balance-button {
+  margin-top: 15rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.add-balance{
+  width: 25%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.add-balance .add-balance-input{
+  padding: 0.5rem;
+  width: 10rem;
+  margin: 1rem;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.purchase-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.purchase-container .buy-button{
+  padding: 0.5rem 1rem;
+  margin-top: 5rem;
+  border-radius: 1rem;
+}
+
+.purchase-container h3{
+  padding: 0.5rem;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.buy{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.buy h1{
+  font-family: 'Times New Roman', Times, serif;
+  padding: 1rem 0;
+}
+
+.buy h2{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: 100;
+  padding: 1rem 0;
+}
+
+.buy .balance{
+  font-weight: 500;
+  margin-top: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #282c34;
+  border: 1px solid #000;
+  border-radius: 2rem;
+  padding: 1rem 1rem;
+  box-shadow: 1px 7px 20px rgba(0, 0, 0, 0.3);
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #58a5f3;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
