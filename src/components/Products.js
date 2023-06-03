@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL, FRONT_URL } from "../services";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -19,7 +20,7 @@ const Products = () => {
     setProducts(data);
   };
 
-  let link = `${F_URL}/products/product/`;
+  let link = `/products/product/`;
 
   return (
     <div className="products">
@@ -31,14 +32,14 @@ const Products = () => {
               <div className="container">
                 <li key={_id} className="product">
                   <h4 className="product-item">{name}</h4>
-                  <a href={link + _id} className="product-details-button">Details</a>
+                  <Link to={link + _id} className="product-details-button">Details</Link>
                 </li>
               </div>
             );
           })}
         </div>
       </ul>
-      <a href="/add-product" className="add-products-link">Add A Product ?</a>
+      <Link to="/add-product" className="add-products-link">Add A Product ?</Link>
     </div>
   );
 };
