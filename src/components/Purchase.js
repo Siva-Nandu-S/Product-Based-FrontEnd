@@ -6,7 +6,6 @@ const Purchase = () => {
   const id = useParams();
   const navigate = useNavigate();
   let user = JSON.parse(localStorage.getItem("User"));
-  const junk = 1;
   const URL = BASE_URL;
   const F_URL = FRONT_URL;
 
