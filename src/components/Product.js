@@ -4,7 +4,6 @@ import { BASE_URL,FRONT_URL } from "../services";
 
 const Product = () => {
   const id = useParams();
-  const junk = "";
   const URL = BASE_URL;
   const F_URL = FRONT_URL;
 
@@ -12,7 +11,7 @@ const Product = () => {
 
   useEffect(() => {
     getProduct();
-  },[junk]);
+  });
 
   const getProduct = async () => {
     let data = await fetch(`${URL}/products/product/${id.id}`, {

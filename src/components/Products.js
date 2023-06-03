@@ -3,13 +3,12 @@ import { BASE_URL, FRONT_URL } from "../services";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-  const junk = "";
   const URL = BASE_URL;
   const F_URL = FRONT_URL;
   console.log(process.env.REACT_APP_BASE_URL);
   useEffect(() => {
     getProducts();
-  },[junk]);
+  });
 
   const getProducts = async () => {
     let data = await fetch(`${URL}/products`, {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { BASE_URL,FRONT_URL } from "../services";
+import { BASE_URL, FRONT_URL } from "../services";
 
 const Purchase = () => {
   const id = useParams();
@@ -14,7 +14,7 @@ const Purchase = () => {
 
   useEffect(() => {
     purchase();
-  },[junk]);
+  });
 
   const props = {
     username: user.username,
@@ -45,9 +45,9 @@ const Purchase = () => {
       }),
     });
     data = await data.json();
-    let details = JSON.parse(localStorage.getItem('User'));
+    let details = JSON.parse(localStorage.getItem("User"));
     details.balance = data.newBalance;
-    localStorage.setItem('User', JSON.stringify(details));
+    localStorage.setItem("User", JSON.stringify(details));
     navigate(`/buy/${id.id}`);
   };
 
@@ -60,7 +60,9 @@ const Purchase = () => {
       <h3>Stock: {details.stock}</h3>
       <h3>Your Balance: {details.balance}</h3>
       {details.enough_balance ? (
-        <button onClick={buyProduct} className="buy-button">BUY</button>
+        <button onClick={buyProduct} className="buy-button">
+          BUY
+        </button>
       ) : (
         <a href={link}>Back</a>
       )}

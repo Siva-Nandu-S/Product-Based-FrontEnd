@@ -8,7 +8,6 @@ const SignUp = () => {
   const [balance, setBalance] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const junk = 0.34;
   const URL = BASE_URL;
 
   useEffect(() => {
@@ -16,7 +15,7 @@ const SignUp = () => {
     if (auth) {
       navigate('/');
     }
-  },[junk]);
+  });
 
   const collectData = async () => {
     console.log("Collecting data");
