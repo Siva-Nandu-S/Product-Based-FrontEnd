@@ -45,6 +45,39 @@
 
 /*-----------------------------------------------------------------------------------------*/
 
+  .home{
+    height: 90vh;
+    background: url("./hello.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .home h1{
+    font-size: 6rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-bottom: 3rem;
+  }
+  
+  .home h4{
+    font-size: 1.3rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  @media (max-width:768px){
+    .home h1{
+      font-size: 3rem;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      padding-bottom: 3rem;
+    }
+    .home h4{
+      font-size: 1.3rem;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    }
+  }
+
+/*-----------------------------------------------------------------------------------------*/
+
 .register {
   width: 30%;
   display: flex;
@@ -202,8 +235,9 @@
     display: flex;
     text-align: center;
     align-items: center;
+    justify-content: center;
     padding-bottom: 0.5rem;
-    margin-left: 0;
+    margin-left: 0.7rem;
   }
 }
 
