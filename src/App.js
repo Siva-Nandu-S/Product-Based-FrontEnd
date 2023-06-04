@@ -21,9 +21,6 @@ function App() {
         <Nav />
         <Routes>
           <Route element={<PrivateComponent />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/product/:id" element={<Product />} />
             <Route path="/users/user/:id" element={<User />} />
             <Route path="/add-product" element={<AddProduct />} />
             <Route path="/add-balance" element={<AddBalance />} />
@@ -32,6 +29,9 @@ function App() {
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/product/:id" element={<Product />} />
         </Routes>
       </BrowserRouter>
     </div>
