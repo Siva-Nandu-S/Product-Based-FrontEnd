@@ -19,6 +19,10 @@ const SignUp = () => {
 
   const collectData = async () => {
     console.log("Collecting data");
+    if(password.length < 8) {
+      window.alert("Password must be at least 8 characters");
+      navigate('/sign-up');
+    }
     let details = {
       name: name,
       username: username,
@@ -39,9 +43,6 @@ const SignUp = () => {
     }
     if(data.result === "username"){
       window.alert("Username already exists");
-    }
-    if(data.result === "Password"){
-      window.alert("Password too short");
     }
   };
 
