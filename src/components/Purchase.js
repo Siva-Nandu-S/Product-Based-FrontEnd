@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { BASE_URL, FRONT_URL } from "../services";
+import { useParams, useNavigate, Link } from "react-router-dom";
+import { BASE_URL} from "../services";
 
 const Purchase = () => {
   const id = useParams();
   const navigate = useNavigate();
   let user = JSON.parse(localStorage.getItem("User"));
   const URL = BASE_URL;
-  const F_URL = FRONT_URL;
 
   const [details, setDetails] = useState("");
 
@@ -50,8 +49,6 @@ const Purchase = () => {
     navigate(`/buy/${id.id}`);
   };
 
-  let link = `${F_URL}/products`;
-
   return (
     <div className="purchase-container">
       <h1>Purchase</h1>
@@ -63,7 +60,7 @@ const Purchase = () => {
           BUY
         </button>
       ) : (
-        <a href={link}>Back</a>
+        <Link to="/products">Back</Link>
       )}
     </div>
   );
