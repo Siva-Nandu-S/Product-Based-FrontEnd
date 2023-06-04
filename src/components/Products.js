@@ -2,13 +2,19 @@ import React, { useState, useEffect } from "react";
 import { BASE_URL} from "../services";
 import { Link } from "react-router-dom";
 // import {FRONT_URL } from "../services";
+import Loading from "./Loading";
 
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const URL = BASE_URL;
   // const F_URL = FRONT_URL;
-  console.log(process.env.REACT_APP_BASE_URL);
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 6000)
+  })
+
   useEffect(() => {
     getProducts();
   });
@@ -25,7 +31,8 @@ const Products = () => {
   let link = `/products/product/`;
 
   return (
-    <div className="products">
+    <>
+      {loading === false ? (<div className="products">
       <h1 className="products-h1">Products</h1>
       <ul className="products-list">
         <div>
@@ -42,7 +49,12 @@ const Products = () => {
         </div>
       </ul>
       <Link to="/add-product" className="add-products-link">Add A Product ?</Link>
-    </div>
+    </div>)
+    :
+    <Loading />
+    }
+    </>
+    
   );
 };
 
