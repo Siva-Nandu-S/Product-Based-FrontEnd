@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Footer from "./components/Footer";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
+import Home from "./components/Home";
 import Products from "./components/Products";
 import AddProduct from "./components/AddProduct";
 import Product from "./components/Product";
@@ -20,7 +21,7 @@ function App() {
         <Nav />
         <Routes>
           <Route element={<PrivateComponent />}>
-            <Route path="/" element={<h1>You are in Home Page</h1>} />
+            <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/product/:id" element={<Product />} />
             <Route path="/users/user/:id" element={<User />} />

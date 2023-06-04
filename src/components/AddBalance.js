@@ -48,7 +48,7 @@ const AddBalance = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={addBalance}>ADD</button>
+      <button onClick={addBalance} className="add-balance-final">ADD</button>
     </div>
   );
 };
