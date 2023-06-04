@@ -37,8 +37,11 @@ const SignUp = () => {
     if(data.result === "success"){
       navigate('/login');
     }
-    if(data.status === 400){
-      navigate('/sign-up');
+    if(data.result === "username"){
+      window.alert("Username already exists");
+    }
+    if(data.result === "Password"){
+      window.alert("Password too short");
     }
   };
 
