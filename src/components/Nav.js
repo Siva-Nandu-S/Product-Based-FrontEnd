@@ -36,6 +36,16 @@ const Nav = () => {
             <p></p>
           )}
         </li>
+        <li className="nav-cart">
+          {auth ? (
+            <div>
+              {}
+              <Link to={"/cart/" + auth.username}>Cart</Link>
+            </div>
+          ) : (
+            <p></p>
+          )}
+        </li>
       </ul>
     </div>
   );

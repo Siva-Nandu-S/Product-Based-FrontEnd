@@ -13,6 +13,7 @@ import Purchase from "./components/Purchase";
 import Buy from "./components/Buy";
 import AddBalance from "./components/AddBalance";
 import PrivateComponent from "./components/PrivateComponent";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
             <Route path="/add-product" element={<AddProduct />} />
             <Route path="/add-balance" element={<AddBalance />} />
             <Route path="/purchase/:id" element={<Purchase />} />
-            <Route path="/buy/:id" element={<Buy />} />
+            <Route path="/buy" element={<Buy />} />
+            <Route path="/cart/:id" element={<Cart />} />
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/sign-up" element={<SignUp />} />

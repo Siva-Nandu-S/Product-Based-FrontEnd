@@ -23,12 +23,29 @@ const Product = () => {
 
   let link = `/purchase/`;
 
+  const user = JSON.parse(localStorage.getItem('User'));
+
+  function addToCart(){
+    let details = {
+      product_name: product.name,
+      price: product.price,
+      product_id: product._id,
+      username: user.username,
+    }
+    fetch(`${URL}/cart`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(details),
+    });
+  }
+
   return (
     <div className="product-container">
       <h1>{product.name}</h1>
       <h4>Price : {product.price}</h4>
       <h4>Remaining Stock : {product.stock}</h4>
-      <Link to={link + id.id} className="product-buy-button">Buy</Link>
+      <Link to={link + id.id} className="product-buy-button">Buy</Link><br/>
+      <button onClick={addToCart} className="add-cart-btn">Add To Cart</button>
     </div>
   );
 };

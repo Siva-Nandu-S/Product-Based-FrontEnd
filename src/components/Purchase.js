@@ -46,7 +46,7 @@ const Purchase = () => {
     let details = JSON.parse(localStorage.getItem("User"));
     details.balance = data.newBalance;
     localStorage.setItem("User", JSON.stringify(details));
-    navigate(`/buy/${id.id}`);
+    navigate(`/buy`);
   };
 
   return (
